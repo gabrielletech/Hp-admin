@@ -1,7 +1,7 @@
-import { Box, Typography, useTheme } from '@mui/material-ui';
+import { Box, Typography, useTheme } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import { tokens } from '../../theme';
-import { dataTeam } from '../../data/dataTeam'
+import { dataTeam } from '../../data/data';
 import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined'
 import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined'
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined'
@@ -76,9 +76,10 @@ const Team = () => {
     ];
 
     return (
-        <Box>
+        <Box m="20px">
             <Header title="TEAM" subtitle="Managing the Team Members" />
-            <Box>
+            <Box
+                m="40px 0 0 0" height="75vh">
                 <DataGrid
                     rows={dataTeam}
                     colums={columns}>
