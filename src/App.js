@@ -14,14 +14,12 @@ import Team from './scenes/team'
 // import Geography from './scenes/geography'
 // import Calendar from './scenes/calendar'
 import { Routes, Route } from 'react-router-dom';
-import { ProSidebarProvider } from 'react-pro-sidebar';
 
 function App() {
   const [theme, colorMode] = useMode();
   return (
   <ColorModeContext.Provider value={colorMode}>
     <ThemeProvider theme={theme}>
-      <ProSidebarProvider>
         <CssBaseline />
         <div className="app">
           <SideBar />
@@ -42,7 +40,6 @@ function App() {
             </Routes>
           </main>
         </div>
-    </ProSidebarProvider>
     </ThemeProvider>
   </ColorModeContext.Provider>
     
